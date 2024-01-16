@@ -5,6 +5,44 @@ import Time from './components/Time'
 
 function App() {
 
+  const times = [
+    {
+        nome: 'Programação',
+        corPrimaria: '',
+        corSecundaria: '',
+    },
+    {
+        nome: 'Front-End',
+        corPrimaria: '',
+        corSecundaria: '',
+    },
+    {
+        nome: 'Data Science',
+        corPrimaria: '',
+        corSecundaria: '',
+    },
+    {
+        nome: 'Devops',
+        corPrimaria: '',
+        corSecundaria: '',
+    },
+    {
+        nome: 'UX e Design',
+        corPrimaria: '',
+        corSecundaria: '',
+    },
+    {
+        nome: 'Mobile',
+        corPrimaria: '',
+        corSecundaria: '',
+    },
+    {
+        nome: 'Inovação e Gestão',
+        corPrimaria: '',
+        corSecundaria: '',
+    }
+]
+
   const [colaboradores, setColaboradores] = useState([])
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
