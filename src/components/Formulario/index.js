@@ -4,17 +4,7 @@ import CampoTexto from '../CampoTexto'
 import Dropdown from '../Dropdown'
 import './Formulario.css'
 
-const Formulario = () => {
-
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data-Science',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
+const Formulario = (props) => {
 
     const [nome, setNome] = useState(``)
     const [cargo, setCargo] = useState(``)
@@ -30,6 +20,10 @@ const Formulario = () => {
             imagem,
             time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
@@ -59,7 +53,7 @@ const Formulario = () => {
                 <Dropdown 
                     obrigatorio={true} 
                     label="Time" 
-                    itens={times}
+                    itens={props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                     />
