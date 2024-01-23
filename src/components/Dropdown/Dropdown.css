@@ -1,3 +1,7 @@
+.dropdown {
+    margin: 24px 0;
+}
+
 .dropdown label {
     display: block;
     margin-bottom: 8px;
