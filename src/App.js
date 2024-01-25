@@ -214,6 +214,7 @@ const [times, setTimes] = useState([
         <h1>Minha organização</h1>
         {times.map((time, indice) => 
           <Time 
+            mudarCor={mudarCorDoTime}
             key={indice} 
             time={time} 
             colaboradores={colaboradores.filter(colaborador => colaborador.time
