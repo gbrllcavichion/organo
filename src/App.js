@@ -197,6 +197,15 @@ const [times, setTimes] = useState([
     console.log('deletando')
   }
 
+  function mudarCorDoTime(cor, nome) {
+    setTimes(times.map(time => {
+        if(time.nome=== nome) {
+            time.corSecundaria = cor;
+        }
+        return time;
+    }));
+
+
   return (
     <div>
       <Banner />
