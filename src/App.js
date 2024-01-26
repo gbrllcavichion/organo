@@ -6,7 +6,7 @@ import Rodape from './components/Rodape';
 
 function App() {
 
-const [times, setTimes] = useState([
+  const [times, setTimes] = useState([
     {
       nome: 'Programação',
       cor: '#57C278'
@@ -192,33 +192,34 @@ const [times, setTimes] = useState([
 
   function mudarCorDoTime(cor, nome) {
     setTimes(times.map(time => {
-        if(time.nome=== nome) {
-            time.cor = cor;
-        }
-        return time;
+      if (time.nome === nome) {
+        time.cor = cor;
+      }
+      return time;
     }));
 
 
-  return (
-    <div>
-      <Banner />
-      <Formulario times={times.map(time => time.nome)} aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} />
-      <section className="times">
-        <h1>Minha organização</h1>
-        {times.map((time, indice) => 
-          <Time 
-            mudarCor={mudarCorDoTime}
-            key={indice} 
-            time={time} 
-            colaboradores={colaboradores.filter(colaborador => colaborador.time
-            === time.nome)} 
-            aoDeletar={deletarColaborador}
-          />
-        )}
-      </section>
-      <Rodape />
-    </div>
-  );
+    return (
+      <div>
+        <Banner />
+        <Formulario times={times.map(time => time.nome)} aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} />
+        <section className="times">
+          <h1>Minha organização</h1>
+          {times.map((time, indice) =>
+            <Time
+              mudarCor={mudarCorDoTime}
+              key={indice}
+              time={time}
+              colaboradores={colaboradores.filter(colaborador => colaborador.time
+                === time.nome)}
+              aoDeletar={deletarColaborador}
+            />
+          )}
+        </section>
+        <Rodape />
+      </div>
+    );
+  }
 }
 
 export default App;
