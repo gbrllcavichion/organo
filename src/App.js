@@ -221,9 +221,9 @@ function App() {
     console.log('deletando colaborador');
   }
 
-  function mudarCor(cor, nome) {
+  function mudarCor(cor, id) {
     setTimes(times.map(time => {
-      if(time.nome === nome) {
+      if(time.id === id) {
         time.cor = cor;
       }
       return time;
