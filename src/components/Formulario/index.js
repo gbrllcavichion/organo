@@ -66,12 +66,13 @@ const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
                 />
                 <CampoTexto
                     obrigatorio
+                    type='color'
                     label='Cor' 
                     placeholder='Digite a cor do time'
                     valor={corTime}
                     aoAlterado={valor => setCorTime(valor)}
                 />
-                <Botao texto='Criar card' />
+                <Botao texto='Criar novo time' />
             </form>
         </section>
     )
